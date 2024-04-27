@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Lista de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <form id="alunoForm">
+        <label for="input_nome">Nome:</label>
+        <input type="text" id="input_nome" required><br>
+        
+        <label for="input_email">E-mail:</label>
+        <input type="email" id="input_email" required><br>
+        
+        <label for="input_ra">RA:</label>
+        <input type="text" id="input_ra" required><br>
+        
+        <h2>Notas do Primeiro Bimestre</h2>
+        <label for="input_prova_1">Nota da Prova:</label>
+        <input type="number" id="input_prova_1" min="0" max="8" required>
+        
+        <label for=" ">Nota da AEP:</label>
+        <input type="number" id="input_aep_1" min="0" max="1" required>
+        
+        <label for="input_prova_integrada_1">Nota da Prova Integrada:</label>
+        <input type="number" id="input_prova_integrada_1" min="0" max="1" required><br>
+        
+        <h2>Notas do Segundo Bimestre</h2>
+        <label for="input_prova_2">Nota da Prova:</label>
+        <input type="number" id="input_prova_2" min="0" max="8" required>
+        
+        <label for="input_aep_2">Nota da AEP:</label>
+        <input type="number" id="input_aep_2" min="0" max="1" required>
+        
+        <label for="input_prova_integrada_2">Nota da Prova Integrada:</label>
+        <input type="number" id="input_prova_integrada_2" min="0" max="1" required><br>
+        
+        <button type="button" id="adicionarAlunoBtn">Adicionar Aluno</button>
+    </form>
+
+    <h1>Lista de Alunos</h1>
+    <table id="alunoTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>RA</th>
+                <th>Prova 1</th>
+                <th>AEP 1</th>
+                <th>Prova Integrada 1</th>
+                <th>Média 1</th>
+                <th>Prova 2</th>
+                <th>AEP 2</th>
+                <th>Prova Integrada 2</th>
+                <th>Média 2</th>
+                <th>Média Final</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="alunoTableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
